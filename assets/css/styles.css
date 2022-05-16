@@ -329,8 +329,6 @@ button {
 }
 
 /*=============== BUTTON ===============*/
-/* PROXIMO PASSO É SEGUIR A SESSÃO DE BOTÃO DO HOME NO VÍDEO (31:28) E COMPARAR COM O QUE EU FIZ ABAIXO */
-
 .button {
   display: inline-block;
   background: linear-gradient(101deg,
@@ -445,10 +443,113 @@ button {
 }
 
 /*=============== VALUE ===============*/
+.value__container {
+  row-gap: 3rem;
+}
 
+.value__images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value__orbe {
+  width: 266px;
+  height: 316px;
+  background-color: hsl(228, 24%, 97%);
+  border-radius: 135px 135px 16px 16px;
+}
+
+.value__img {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  z-index: var(--z-fixed);
+  overflow: hidden;
+  border-radius: 125px 125px 12px 12px;
+  inset: 0;
+  margin: auto;
+  box-shadow: 0 16px 32px hsla(228,66%, 25%, 0.25);
+}
+
+.value__description {
+  font-size: var(--small-font-size);
+  margin-bottom: 2rem;
+}
+
+.value__accordion {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+.value__accordion-item {
+  background-color: var(--body-color);
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1rem 0.75rem;
+}
+
+.value__accordion-header {
+  display: flex;
+  /* justify-content: space-between; não foi utilizado */
+  align-items: center;
+  cursor: pointer;
+}
+
+.value__accordion-icon {
+  background-color: var(--first-color-lighten);
+  padding: 5px;
+  border-radius: 0.25rem;
+  font-size: 18px;
+  color: var(--first-color);
+  margin-right: 0.75rem;
+  transition: 0.3s;
+}
+
+.value__accordation-arrow {
+  display: inline-flex;
+  background-color: var(--first-color-lighten);
+  padding: 0.25rem;
+  color: var(--first-color);
+  border-radius: 2px;
+  font-size: 10px;
+  margin-left: auto;
+  transition: 0.3s;
+}
+
+.value__accordation-arrow i {
+  transition: 0.4s;
+}
+
+.value__accordion-descripion {
+  font-size: var(--smaller-font-size);
+  padding: 1.25rem 2.5rem 0 2.75rem;
+}
+
+.value__accordion-content {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.25s ease;
+}
 
 /*Rotate icon and add shadows*/
+.accordion-open {
+  box-shadow: 0 12px 32px hsla(228, 66%, 45%, .1);
+}
 
+/* as classes abaixo só funcionaráo se o js for ativado clicando no header do card, pois o js irá adicionar a classe accordion-open no elemento pai */
+.accordion-open .value__acordion-icon {
+  box-shadow: 0 4px 4px hsla(228, 66%, 45%, 0.1);
+}
+
+.accordion-open .value__accordation-arrow {
+  box-shadow: 0 2px 4px hsla(228, 66%, 45%, 0.1);
+}
+
+.accordion-open .value__accordation-arrow i {
+  transform: rotate(-180deg);
+}
 
 /*=============== CONTACT ===============*/
 
